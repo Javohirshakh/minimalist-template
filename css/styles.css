@@ -28,6 +28,7 @@ body {
   font-family: var(--main-font);
   color: var(--main-color);
   background-color: #fff;
+  flex-direction: column;
 }
 
 img {
@@ -44,6 +45,9 @@ img {
   padding: 0;
   clip: rect(0 0 0 0);
   overflow: hidden;
+}
+main{
+  flex-grow: 1;
 }
 
 /* FONTS */
@@ -529,4 +533,60 @@ footer .logo{
   .links__item:not(:last-child){
     margin: 0 0 32px!important;
   }
+}
+
+
+
+/* CONTACT PAGE */
+.touch__inner{
+  position: relative;
+  padding-top: 50px;
+}
+.touch__inner::before{
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background-color: var(--main-color);
+  opacity: 0.15;
+}
+.touch .socials__link{
+  color: var(--main-color);
+  transition: color 0.2s;
+}
+.touch .socials__link:hover{
+  color: #203A4C;
+}
+.touch .socials__link:active{
+  opacity: 0.6;
+}
+
+.touch__inner{
+  display: flex;
+  justify-content: space-between;
+}
+.section__header{
+  margin: 0;
+  width: 350px!important;
+  font-weight: bold;
+  font-size: 40px;
+  line-height: 42px;
+  font-family: var(--main-headers-font);
+  letter-spacing: -0.4;
+  color: var(--main-color);
+}
+.section__content{
+  width: 635px;
+}
+.section__content p{
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 30px;
+  opacity: 0.8;
+  margin: 0;
+}
+.section__content .socials{
+  margin-top: 24px;
 }
